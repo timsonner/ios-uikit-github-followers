@@ -14,7 +14,7 @@ class CustomButton: UIButton {
     override init(frame: CGRect) {
         // Create a UIButton.
         super.init(frame: frame)
-        configure()
+        configureCustomButton()
     }
     
     // Init for story boards.
@@ -27,15 +27,16 @@ class CustomButton: UIButton {
         super.init(frame: .zero)
         self.backgroundColor = backgroundColor
         self.setTitle(title, for: .normal)
-        configure()
+        configureCustomButton()
     }
     
     // MARK: Functions
     // Configure all sub classes.
-    private func configure() {
-        layer.cornerRadius = 10
-        titleLabel?.textColor = .white
-        titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
+    private func configureCustomButton() {
+        // Configuration for button appearance.
+        configuration = .tinted()
+        configuration?.cornerStyle = .medium
+        
         // Set for autolayout purposes.
         translatesAutoresizingMaskIntoConstraints = false
     }
