@@ -10,16 +10,11 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    
+    // Conform to UISceneDelegate protocol by implementing func scene().
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // MARK: Setup for programatic UI
         
         // Create Navigation Controller(s)
-        
-        // Navigation controllers hold instances of UIViewControllers.
-        let searchNavigationController = createSearchNavigationController()
-        let favoritesNavigationController = createFavoritesNavigationController()
-        
         // MARK: Create a UITabViewController
         // Create an instance of UIWindowScene.
         guard let windowScence = scene as? UIWindowScene else { return }
@@ -35,8 +30,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func createTabBarController() -> UITabBarController {
         let tabBarController = UITabBarController()
+        // Set app wide appearance of UITabBar
         UITabBar.appearance().tintColor = .systemGreen
-        // Feed the UITabBarController UIViewControllers.
+        // Pass the UITabBarController an array of UIViewControllers.
         tabBarController.viewControllers = [createSearchNavigationController(), createFavoritesNavigationController()]
         return tabBarController
     }
@@ -44,14 +40,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func createSearchNavigationController() -> UINavigationController {
         let viewController = SearchViewController()
         viewController.title = "Search"
-        viewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "magnifyingglass"), tag: 0)
+        viewController.tabBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass"), tag: 0)
         return UINavigationController(rootViewController: viewController)
     }
     
     func createFavoritesNavigationController() -> UINavigationController {
         let viewController = FavoritesViewController()
         viewController.title = "Favorites"
-        viewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "star"), tag: 0)
+        viewController.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(systemName: "star"), tag: 0)
         return UINavigationController(rootViewController: viewController)
     }
     
