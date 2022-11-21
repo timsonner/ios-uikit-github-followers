@@ -13,26 +13,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // MARK: Setup for programatic UI
-        // Create Navigation Controller(s)
-        // Navigation controllers hold UIViewControllers.
         
+        // Create Navigation Controller(s)
+        
+        // Navigation controllers hold instances of UIViewControllers.
         let searchNavigationController = createSearchNavigationController()
         let favoritesNavigationController = createFavoritesNavigationController()
-        // Create a UITabViewController
-       
-        // Create an instance of UIWindowScene
+        
+        // MARK: Create a UITabViewController
+        // Create an instance of UIWindowScene.
         guard let windowScence = scene as? UIWindowScene else { return }
-        // Create an instance of UIWindow
-        window = UIWindow(frame: windowScence.coordinateSpace.bounds)
-        // Set the windowScene of the UIWindow
+        // Create an instance of a UIWindow.
+        window = UIWindow(frame: windowScence.coordinateSpace.bounds) // fills entire screen
+        // Set the windowScene of the UIWindow instance.
         window?.windowScene = windowScence
-        // Set the UIViewController of the UIWindow
-        window?.rootViewController = createTabBar() // tabBarController is a type of UIViewController, now set as the root view controller.
-        // Make the window scence visible
+        // Set the UIViewController of the UIWindow.
+        window?.rootViewController = createTabBarController() // tabBarController is a type of UIViewController, now set as the root view controller.
+        // Make the window scence visible.
         window?.makeKeyAndVisible()
     }
     
-    func createTabBar() -> UITabBarController {
+    func createTabBarController() -> UITabBarController {
         let tabBarController = UITabBarController()
         UITabBar.appearance().tintColor = .systemGreen
         // Feed the UITabBarController UIViewControllers.
