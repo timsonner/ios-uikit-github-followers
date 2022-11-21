@@ -55,6 +55,8 @@ class SearchViewController: UIViewController {
     
     func configureUIButton() {
         view.addSubview(searchButton)
+        searchButton.set(color: .green, title: "Get Followers")
+        
         searchButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
