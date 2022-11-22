@@ -20,6 +20,7 @@ class SearchViewController: UIViewController {
         configureLogoUIImageView() // Display logo image.
         configureUsernameUITextField() // Display text field.
         configureSearchUIButton() // Display search button.
+        createKeyboardDismissTapGesture()
     }
     
     // MARK: Called every time view is rendered.
@@ -28,9 +29,11 @@ class SearchViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true // Hide navigation bar.
     }
     
+    // MARK: Tap Gesture
     // Make keyboard disappear on tap away.
     func createKeyboardDismissTapGesture() {
-        
+        let tapGesture = UITapGestureRecognizer(target: view.self, action: #selector(UIView.endEditing(_:))) // Take away first responder status from the keyboard.
+        view.addGestureRecognizer(tapGesture)
     }
     
     // MARK: logoUIImageView
@@ -53,7 +56,8 @@ class SearchViewController: UIViewController {
     
     // MARK: usernameUITextField
     func configureUsernameUITextField() {
-        view.addSubview(usernameUITextField) 
+        view.addSubview(usernameUITextField)
+        usernameUITextField.delegate = self // This view controller is now the delegate of this UITextField.
         
         // Storyboard.
         usernameUITextField.translatesAutoresizingMaskIntoConstraints = false
@@ -83,5 +87,12 @@ class SearchViewController: UIViewController {
             searchUIButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
             searchUIButton.heightAnchor.constraint(equalToConstant: 50)
         ])
+    }
+}
+
+extension SearchViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("Delegate detected event.")
+        return true
     }
 }
