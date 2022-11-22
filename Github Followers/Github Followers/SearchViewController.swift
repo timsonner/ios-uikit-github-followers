@@ -30,11 +30,30 @@ class SearchViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true // Hide navigation bar.
     }
     
+    // MARK: Actions
+    @objc func pushFollowersListViewcontroller() {
+        // Create instance of UIViewController.
+        let followersListViewController = FollowersListViewController()
+        
+        // Set the username property of the UIViewController.
+        followersListViewController.username = usernameUITextField.text
+        
+        // Set navigation bar title.
+        followersListViewController.title = usernameUITextField.text
+        
+        // Push the UIViewController on to the stack of views.
+        navigationController?.pushViewController(followersListViewController, animated: true)
+        // Set navigation bar title to large title style.
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        NSLog("❎ pushFollowersListViewController Action called.")
+    }
+    
     // MARK: Tap Gesture
     // Make keyboard disappear on tap away.
     func createKeyboardDismissTapGesture() {
         let tapGesture = UITapGestureRecognizer(target: view.self, action: #selector(UIView.endEditing(_:))) // Take away first responder status from the keyboard.
-        view.addGestureRecognizer(tapGesture)
+        view.addGestureRecognizer(tapGesture) // Add tap gesture to view controller.
     }
     
     // MARK: logoUIImageView
@@ -58,6 +77,8 @@ class SearchViewController: UIViewController {
     // MARK: usernameUITextField
     func configureUsernameUITextField() {
         view.addSubview(usernameUITextField)
+        
+        // Set delegate of UITextField.
         usernameUITextField.delegate = self // This view controller is now the delegate of this UITextField.
         
         // Storyboard.
@@ -75,6 +96,9 @@ class SearchViewController: UIViewController {
     // MARK: searchUIButton
     func configureSearchUIButton() {
         view.addSubview(searchUIButton)
+        
+        searchUIButton.addTarget(self, action: #selector(pushFollowersListViewcontroller), for: .touchUpInside)
+        
         // Convenience init from SearchUIButton.
         searchUIButton.set(color: .green, title: "Get Followers", imageSystemName: "person.3")
         
@@ -91,9 +115,11 @@ class SearchViewController: UIViewController {
     }
 }
 
+// MARK: Extensions
 extension SearchViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("Delegate detected event.")
+        print("❎ Delegate SearchViewController detected an event.")
+        pushFollowersListViewcontroller()
         return true
     }
 }
