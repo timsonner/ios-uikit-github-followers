@@ -12,9 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     // Conform to UISceneDelegate protocol by implementing func scene().
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // MARK: Setup for programatic UI
         
-        // Create Navigation Controller(s)
         // MARK: Create a UITabViewController
         // Create an instance of UIWindowScene.
         guard let windowScence = scene as? UIWindowScene else { return }
@@ -37,16 +35,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         return tabBarController
     }
     
+    // Create navigation controller for search.
     func createSearchNavigationController() -> UINavigationController {
         let viewController = SearchViewController()
         viewController.title = "Search"
+        
+        // Add this navigation controller to the tab bar.
         viewController.tabBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass"), tag: 0)
         return UINavigationController(rootViewController: viewController)
     }
     
+    // Create navigation controller for favorites.
     func createFavoritesNavigationController() -> UINavigationController {
         let viewController = FavoritesViewController()
         viewController.title = "Favorites"
+        
+        // Add this navigation controller to the tab bar.
         viewController.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(systemName: "star"), tag: 0)
         return UINavigationController(rootViewController: viewController)
     }
@@ -70,7 +74,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidEnterBackground(_ scene: UIScene) {
         
     }
-    
-    
 }
 
