@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SearchViewController: UIViewController {
     
@@ -94,5 +95,25 @@ extension SearchViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("Delegate detected event.")
         return true
+    }
+}
+
+// MARK: SwiftUI ViewControllerRepresentable
+struct ViewControllerRepresentable: UIViewControllerRepresentable {
+    typealias UIViewControllerType = SearchViewController
+    
+    func makeUIViewController(context: Context) -> SearchViewController {
+        SearchViewController()
+    }
+    
+    func updateUIViewController(_ uiViewController: SearchViewController, context: Context) {
+        
+    }
+}
+
+// MARK: SwiftUI Preview
+struct ViewController_Previews: PreviewProvider {
+    static var previews: some View {
+        ViewControllerRepresentable()
     }
 }

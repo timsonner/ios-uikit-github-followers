@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class FavoritesViewController: UIViewController {
 
@@ -13,5 +14,32 @@ class FavoritesViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
     }
+    
+    
+    
+    // MARK: SwiftUI ViewControllerRepresentable
+    struct ViewControllerRepresentable: UIViewControllerRepresentable {
+        typealias UIViewControllerType = FavoritesViewController
+        
+        func makeUIViewController(context: Context) -> FavoritesViewController {
+            FavoritesViewController()
+        }
+        
+        func updateUIViewController(_ uiViewController: FavoritesViewController, context: Context) {
+            
+        }
+    }
+
+    // MARK: SwiftUI Preview
+    struct ViewController_Previews: PreviewProvider {
+        static var previews: some View {
+            ViewControllerRepresentable()
+        }
+    }
  
 }
+
+
+
+
+
