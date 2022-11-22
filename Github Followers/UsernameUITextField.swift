@@ -7,12 +7,12 @@
 
 import UIKit
 
-class CustomUITextField: UITextField {
+class UsernameUITextField: UITextField {
     // MARK: Init
     // Init super
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configure()
+        configureUsernameUITextField()
     }
     
     // Init storyboard
@@ -21,7 +21,7 @@ class CustomUITextField: UITextField {
     }
     
     // MARK: Functions
-    private func configure() {
+    private func configureUsernameUITextField() {
         layer.cornerRadius = 10
         layer.borderWidth = 2
         layer.backgroundColor = UIColor.systemGray4.cgColor // .cgColor converts UIColor to CGColor

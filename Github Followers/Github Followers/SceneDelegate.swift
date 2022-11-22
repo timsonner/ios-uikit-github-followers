@@ -51,10 +51,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         return UINavigationController(rootViewController: viewController)
     }
     
-    func createTabBar(){
-        
-    }
-    
     func sceneDidDisconnect(_ scene: UIScene) {
         
     }

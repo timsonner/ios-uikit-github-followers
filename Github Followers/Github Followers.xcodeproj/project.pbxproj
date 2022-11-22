@@ -13,8 +13,8 @@
 		2B9244162921FD80005FA5C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B9244142921FD80005FA5C1 /* LaunchScreen.storyboard */; };
 		2BED9FE22927518100BB8722 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FE12927518100BB8722 /* FavoritesViewController.swift */; };
 		2BED9FE4292751C400BB8722 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FE3292751C400BB8722 /* SearchViewController.swift */; };
-		2BED9FE6292B57CD00BB8722 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FE5292B57CD00BB8722 /* CustomButton.swift */; };
-		2BED9FE8292C118800BB8722 /* CustomUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FE7292C118800BB8722 /* CustomUITextField.swift */; };
+		2BED9FE6292B57CD00BB8722 /* SearchUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FE5292B57CD00BB8722 /* SearchUIButton.swift */; };
+		2BED9FE8292C118800BB8722 /* UsernameUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FE7292C118800BB8722 /* UsernameUITextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +26,8 @@
 		2B9244172921FD80005FA5C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BED9FE12927518100BB8722 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		2BED9FE3292751C400BB8722 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		2BED9FE5292B57CD00BB8722 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		2BED9FE7292C118800BB8722 /* CustomUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITextField.swift; sourceTree = "<group>"; };
+		2BED9FE5292B57CD00BB8722 /* SearchUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUIButton.swift; sourceTree = "<group>"; };
+		2BED9FE7292C118800BB8722 /* UsernameUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameUITextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,8 +44,8 @@
 		2B9243FD2921FD7B005FA5C1 = {
 			isa = PBXGroup;
 			children = (
-				2BED9FE5292B57CD00BB8722 /* CustomButton.swift */,
-				2BED9FE7292C118800BB8722 /* CustomUITextField.swift */,
+				2BED9FE5292B57CD00BB8722 /* SearchUIButton.swift */,
+				2BED9FE7292C118800BB8722 /* UsernameUITextField.swift */,
 				2B9244082921FD7B005FA5C1 /* Github Followers */,
 				2B9244072921FD7B005FA5C1 /* Products */,
 			);
@@ -147,8 +147,8 @@
 				2B92440A2921FD7B005FA5C1 /* AppDelegate.swift in Sources */,
 				2BED9FE22927518100BB8722 /* FavoritesViewController.swift in Sources */,
 				2B92440C2921FD7B005FA5C1 /* SceneDelegate.swift in Sources */,
-				2BED9FE8292C118800BB8722 /* CustomUITextField.swift in Sources */,
-				2BED9FE6292B57CD00BB8722 /* CustomButton.swift in Sources */,
+				2BED9FE8292C118800BB8722 /* UsernameUITextField.swift in Sources */,
+				2BED9FE6292B57CD00BB8722 /* SearchUIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
