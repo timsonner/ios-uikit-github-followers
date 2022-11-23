@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FollowersListViewController: UIViewController {
+class FollowersListUIViewController: UIViewController {
 
     var username: String!
     

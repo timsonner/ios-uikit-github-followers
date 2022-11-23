@@ -1,5 +1,5 @@
 //
-//  CustomUIButton.swift
+//  ButtonUIButton.swift
 //  Github Followers
 //
 //  Created by Timothy Sonner on 11/20/22.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class SearchUIButton: UIButton {
+class ButtonUIButton: UIButton {
     // MARK: Init
     
     // Init super.
@@ -16,7 +16,7 @@ class SearchUIButton: UIButton {
         // Create a base UIButton.
         super.init(frame: frame)
         // Configure the base button.
-        configure()
+        configureButtonUIButton()
     }
     
     // Init storyboard.
@@ -33,7 +33,7 @@ class SearchUIButton: UIButton {
     
     // MARK: Functions
     // Configure all sub classes.
-    private func configure() {
+    private func configureButtonUIButton() {
         // Configuration for button appearance.
         configuration = .tinted()
         configuration?.cornerStyle = .medium

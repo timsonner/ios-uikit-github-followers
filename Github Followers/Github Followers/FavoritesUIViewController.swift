@@ -1,5 +1,5 @@
 //
-//  FavoritesListViewController.swift
+//  FavoritesUIViewController.swift
 //  Github Followers
 //
 //  Created by Timothy Sonner on 11/17/22.
@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-class FavoritesViewController: UIViewController {
+class FavoritesUIViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,13 +19,13 @@ class FavoritesViewController: UIViewController {
     
     // MARK: SwiftUI ViewControllerRepresentable
     struct ViewControllerRepresentable: UIViewControllerRepresentable {
-        typealias UIViewControllerType = FavoritesViewController
+        typealias UIViewControllerType = FavoritesUIViewController
         
-        func makeUIViewController(context: Context) -> FavoritesViewController {
-            FavoritesViewController()
+        func makeUIViewController(context: Context) -> FavoritesUIViewController {
+            FavoritesUIViewController()
         }
         
-        func updateUIViewController(_ uiViewController: FavoritesViewController, context: Context) {
+        func updateUIViewController(_ uiViewController: FavoritesUIViewController, context: Context) {
             
         }
     }

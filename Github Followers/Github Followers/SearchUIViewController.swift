@@ -1,5 +1,5 @@
 //
-//  SearchViewController.swift
+//  SearchUIViewController.swift
 //  Github Followers
 //
 //  Created by Timothy Sonner on 11/17/22.
@@ -8,11 +8,15 @@
 import UIKit
 import SwiftUI
 
-class SearchViewController: UIViewController {
+class SearchUIViewController: UIViewController {
     
     let logoUIImageView = UIImageView()
     let usernameUITextField = UsernameUITextField()
-    let searchUIButton = SearchUIButton()
+    let searchUIButton = ButtonUIButton()
+    
+    var isUsernameEmpty: Bool {
+        return usernameUITextField.text!.isEmpty
+    }
     
     // MARK: Initial load of SearchViewController
     override func viewDidLoad() {
@@ -32,8 +36,14 @@ class SearchViewController: UIViewController {
     
     // MARK: Actions
     @objc func pushFollowersListViewcontroller() {
+        guard !isUsernameEmpty else {
+            print("Username is empty")
+            presentAlertUIViewControllerOnMainThread(title: "Error", body: "Username empty.", buttonTitle: "OK")
+            return
+        }
+        
         // Create instance of UIViewController.
-        let followersListViewController = FollowersListViewController()
+        let followersListViewController = FollowersListUIViewController()
         
         // Set the username property of the UIViewController.
         followersListViewController.username = usernameUITextField.text
@@ -116,7 +126,7 @@ class SearchViewController: UIViewController {
 }
 
 // MARK: Extensions
-extension SearchViewController: UITextFieldDelegate {
+extension SearchUIViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("❎ Delegate SearchViewController detected an event.")
         pushFollowersListViewcontroller()
@@ -126,13 +136,13 @@ extension SearchViewController: UITextFieldDelegate {
 
 // MARK: SwiftUI ViewControllerRepresentable
 struct ViewControllerRepresentable: UIViewControllerRepresentable {
-    typealias UIViewControllerType = SearchViewController
+    typealias UIViewControllerType = SearchUIViewController
     
-    func makeUIViewController(context: Context) -> SearchViewController {
-        SearchViewController()
+    func makeUIViewController(context: Context) -> SearchUIViewController {
+        SearchUIViewController()
     }
     
-    func updateUIViewController(_ uiViewController: SearchViewController, context: Context) {
+    func updateUIViewController(_ uiViewController: SearchUIViewController, context: Context) {
         
     }
 }

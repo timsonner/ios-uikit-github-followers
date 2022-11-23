@@ -52,7 +52,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     // Create navigation controller for search.
     func createSearchNavigationController() -> UINavigationController {
-        let viewController = SearchViewController()
+        let viewController = SearchUIViewController()
         viewController.title = "Search"
         
         // Add this navigation controller to the tab bar.
@@ -63,7 +63,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     // Create navigation controller for favorites.
     func createFavoritesNavigationController() -> UINavigationController {
-        let viewController = FavoritesViewController()
+        let viewController = FavoritesUIViewController()
         viewController.title = "Favorites"
         
         // Add this navigation controller to the tab bar.

@@ -11,11 +11,15 @@
 		2B92440C2921FD7B005FA5C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B92440B2921FD7B005FA5C1 /* SceneDelegate.swift */; };
 		2B9244132921FD80005FA5C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B9244122921FD80005FA5C1 /* Assets.xcassets */; };
 		2B9244162921FD80005FA5C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B9244142921FD80005FA5C1 /* LaunchScreen.storyboard */; };
-		2BED9FE22927518100BB8722 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FE12927518100BB8722 /* FavoritesViewController.swift */; };
-		2BED9FE4292751C400BB8722 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FE3292751C400BB8722 /* SearchViewController.swift */; };
-		2BED9FE6292B57CD00BB8722 /* SearchUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FE5292B57CD00BB8722 /* SearchUIButton.swift */; };
+		2BED9FE22927518100BB8722 /* FavoritesUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FE12927518100BB8722 /* FavoritesUIViewController.swift */; };
+		2BED9FE4292751C400BB8722 /* SearchUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FE3292751C400BB8722 /* SearchUIViewController.swift */; };
+		2BED9FE6292B57CD00BB8722 /* ButtonUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FE5292B57CD00BB8722 /* ButtonUIButton.swift */; };
 		2BED9FE8292C118800BB8722 /* UsernameUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FE7292C118800BB8722 /* UsernameUITextField.swift */; };
-		2BED9FEA292C79E600BB8722 /* FollowersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FE9292C79E600BB8722 /* FollowersListViewController.swift */; };
+		2BED9FEA292C79E600BB8722 /* FollowersListUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FE9292C79E600BB8722 /* FollowersListUIViewController.swift */; };
+		2BED9FEC292C9A7700BB8722 /* TitleUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FEB292C9A7700BB8722 /* TitleUILabel.swift */; };
+		2BED9FEE292C9E0100BB8722 /* BodyUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FED292C9E0100BB8722 /* BodyUILabel.swift */; };
+		2BED9FF0292C9F7800BB8722 /* AlertUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FEF292C9F7800BB8722 /* AlertUIViewController.swift */; };
+		2BED9FF2292CB31600BB8722 /* ExtensionUIViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FF1292CB31600BB8722 /* ExtensionUIViewcontroller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,11 +29,15 @@
 		2B9244122921FD80005FA5C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B9244152921FD80005FA5C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B9244172921FD80005FA5C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BED9FE12927518100BB8722 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
-		2BED9FE3292751C400BB8722 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		2BED9FE5292B57CD00BB8722 /* SearchUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUIButton.swift; sourceTree = "<group>"; };
+		2BED9FE12927518100BB8722 /* FavoritesUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesUIViewController.swift; sourceTree = "<group>"; };
+		2BED9FE3292751C400BB8722 /* SearchUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUIViewController.swift; sourceTree = "<group>"; };
+		2BED9FE5292B57CD00BB8722 /* ButtonUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonUIButton.swift; sourceTree = "<group>"; };
 		2BED9FE7292C118800BB8722 /* UsernameUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameUITextField.swift; sourceTree = "<group>"; };
-		2BED9FE9292C79E600BB8722 /* FollowersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListViewController.swift; sourceTree = "<group>"; };
+		2BED9FE9292C79E600BB8722 /* FollowersListUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListUIViewController.swift; sourceTree = "<group>"; };
+		2BED9FEB292C9A7700BB8722 /* TitleUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleUILabel.swift; sourceTree = "<group>"; };
+		2BED9FED292C9E0100BB8722 /* BodyUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyUILabel.swift; sourceTree = "<group>"; };
+		2BED9FEF292C9F7800BB8722 /* AlertUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUIViewController.swift; sourceTree = "<group>"; };
+		2BED9FF1292CB31600BB8722 /* ExtensionUIViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewcontroller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,15 +71,19 @@
 			isa = PBXGroup;
 			children = (
 				2BED9FE7292C118800BB8722 /* UsernameUITextField.swift */,
-				2BED9FE5292B57CD00BB8722 /* SearchUIButton.swift */,
+				2BED9FE5292B57CD00BB8722 /* ButtonUIButton.swift */,
 				2B9244092921FD7B005FA5C1 /* AppDelegate.swift */,
 				2B92440B2921FD7B005FA5C1 /* SceneDelegate.swift */,
-				2BED9FE12927518100BB8722 /* FavoritesViewController.swift */,
-				2BED9FE3292751C400BB8722 /* SearchViewController.swift */,
+				2BED9FE12927518100BB8722 /* FavoritesUIViewController.swift */,
+				2BED9FE3292751C400BB8722 /* SearchUIViewController.swift */,
 				2B9244122921FD80005FA5C1 /* Assets.xcassets */,
 				2B9244142921FD80005FA5C1 /* LaunchScreen.storyboard */,
 				2B9244172921FD80005FA5C1 /* Info.plist */,
-				2BED9FE9292C79E600BB8722 /* FollowersListViewController.swift */,
+				2BED9FE9292C79E600BB8722 /* FollowersListUIViewController.swift */,
+				2BED9FEB292C9A7700BB8722 /* TitleUILabel.swift */,
+				2BED9FED292C9E0100BB8722 /* BodyUILabel.swift */,
+				2BED9FEF292C9F7800BB8722 /* AlertUIViewController.swift */,
+				2BED9FF1292CB31600BB8722 /* ExtensionUIViewcontroller.swift */,
 			);
 			path = "Github Followers";
 			sourceTree = "<group>";
@@ -146,13 +158,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BED9FE4292751C400BB8722 /* SearchViewController.swift in Sources */,
+				2BED9FE4292751C400BB8722 /* SearchUIViewController.swift in Sources */,
 				2B92440A2921FD7B005FA5C1 /* AppDelegate.swift in Sources */,
-				2BED9FE22927518100BB8722 /* FavoritesViewController.swift in Sources */,
-				2BED9FEA292C79E600BB8722 /* FollowersListViewController.swift in Sources */,
+				2BED9FE22927518100BB8722 /* FavoritesUIViewController.swift in Sources */,
+				2BED9FEA292C79E600BB8722 /* FollowersListUIViewController.swift in Sources */,
 				2B92440C2921FD7B005FA5C1 /* SceneDelegate.swift in Sources */,
+				2BED9FF0292C9F7800BB8722 /* AlertUIViewController.swift in Sources */,
+				2BED9FEE292C9E0100BB8722 /* BodyUILabel.swift in Sources */,
+				2BED9FF2292CB31600BB8722 /* ExtensionUIViewcontroller.swift in Sources */,
+				2BED9FEC292C9A7700BB8722 /* TitleUILabel.swift in Sources */,
 				2BED9FE8292C118800BB8722 /* UsernameUITextField.swift in Sources */,
-				2BED9FE6292B57CD00BB8722 /* SearchUIButton.swift in Sources */,
+				2BED9FE6292B57CD00BB8722 /* ButtonUIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
