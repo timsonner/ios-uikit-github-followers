@@ -20,6 +20,9 @@
 		2BED9FEE292C9E0100BB8722 /* BodyUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FED292C9E0100BB8722 /* BodyUILabel.swift */; };
 		2BED9FF0292C9F7800BB8722 /* AlertUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FEF292C9F7800BB8722 /* AlertUIViewController.swift */; };
 		2BED9FF2292CB31600BB8722 /* ExtensionUIViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FF1292CB31600BB8722 /* ExtensionUIViewcontroller.swift */; };
+		2BED9FF6292DC0F500BB8722 /* ContainerUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FF5292DC0F500BB8722 /* ContainerUIView.swift */; };
+		2BED9FF8292EAE9700BB8722 /* FollowerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FF7292EAE9700BB8722 /* FollowerModel.swift */; };
+		2BED9FFA292EB34100BB8722 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FF9292EB34100BB8722 /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		2BED9FED292C9E0100BB8722 /* BodyUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyUILabel.swift; sourceTree = "<group>"; };
 		2BED9FEF292C9F7800BB8722 /* AlertUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUIViewController.swift; sourceTree = "<group>"; };
 		2BED9FF1292CB31600BB8722 /* ExtensionUIViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewcontroller.swift; sourceTree = "<group>"; };
+		2BED9FF5292DC0F500BB8722 /* ContainerUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerUIView.swift; sourceTree = "<group>"; };
+		2BED9FF7292EAE9700BB8722 /* FollowerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerModel.swift; sourceTree = "<group>"; };
+		2BED9FF9292EB34100BB8722 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,8 @@
 		2B9243FD2921FD7B005FA5C1 = {
 			isa = PBXGroup;
 			children = (
+				2BED9FF7292EAE9700BB8722 /* FollowerModel.swift */,
+				2BED9FF9292EB34100BB8722 /* UserModel.swift */,
 				2B9244082921FD7B005FA5C1 /* Github Followers */,
 				2B9244072921FD7B005FA5C1 /* Products */,
 			);
@@ -75,13 +83,13 @@
 				2B9244122921FD80005FA5C1 /* Assets.xcassets */,
 				2B9244142921FD80005FA5C1 /* LaunchScreen.storyboard */,
 				2B9244172921FD80005FA5C1 /* Info.plist */,
-				2BED9FF3292DBC4E00BB8722 /* ViewControllers */,
+				2BED9FF3292DBC4E00BB8722 /* UIViewControllers */,
 				2BED9FF4292DBC9C00BB8722 /* UIViews */,
 			);
 			path = "Github Followers";
 			sourceTree = "<group>";
 		};
-		2BED9FF3292DBC4E00BB8722 /* ViewControllers */ = {
+		2BED9FF3292DBC4E00BB8722 /* UIViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				2BED9FE9292C79E600BB8722 /* FollowersListUIViewController.swift */,
@@ -90,7 +98,7 @@
 				2BED9FF1292CB31600BB8722 /* ExtensionUIViewcontroller.swift */,
 				2BED9FE12927518100BB8722 /* FavoritesUIViewController.swift */,
 			);
-			path = ViewControllers;
+			path = UIViewControllers;
 			sourceTree = "<group>";
 		};
 		2BED9FF4292DBC9C00BB8722 /* UIViews */ = {
@@ -100,6 +108,7 @@
 				2BED9FE5292B57CD00BB8722 /* ButtonUIButton.swift */,
 				2BED9FE7292C118800BB8722 /* UsernameUITextField.swift */,
 				2BED9FEB292C9A7700BB8722 /* TitleUILabel.swift */,
+				2BED9FF5292DC0F500BB8722 /* ContainerUIView.swift */,
 			);
 			path = UIViews;
 			sourceTree = "<group>";
@@ -179,9 +188,12 @@
 				2BED9FE22927518100BB8722 /* FavoritesUIViewController.swift in Sources */,
 				2BED9FEA292C79E600BB8722 /* FollowersListUIViewController.swift in Sources */,
 				2B92440C2921FD7B005FA5C1 /* SceneDelegate.swift in Sources */,
+				2BED9FF8292EAE9700BB8722 /* FollowerModel.swift in Sources */,
 				2BED9FF0292C9F7800BB8722 /* AlertUIViewController.swift in Sources */,
 				2BED9FEE292C9E0100BB8722 /* BodyUILabel.swift in Sources */,
+				2BED9FFA292EB34100BB8722 /* UserModel.swift in Sources */,
 				2BED9FF2292CB31600BB8722 /* ExtensionUIViewcontroller.swift in Sources */,
+				2BED9FF6292DC0F500BB8722 /* ContainerUIView.swift in Sources */,
 				2BED9FEC292C9A7700BB8722 /* TitleUILabel.swift in Sources */,
 				2BED9FE8292C118800BB8722 /* UsernameUITextField.swift in Sources */,
 				2BED9FE6292B57CD00BB8722 /* ButtonUIButton.swift in Sources */,

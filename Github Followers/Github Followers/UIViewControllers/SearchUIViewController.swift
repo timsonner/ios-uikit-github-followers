@@ -18,7 +18,8 @@ class SearchUIViewController: UIViewController {
         return usernameUITextField.text!.isEmpty
     }
     
-    // MARK: Initial load of SearchViewController
+    // MARK: viewDidLoad()
+    // Initial load of the view controller.
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground // Set view background color.
@@ -28,13 +29,14 @@ class SearchUIViewController: UIViewController {
         createKeyboardDismissTapGesture()
     }
     
-    // MARK: Called every time view is rendered.
+    // MARK: viewWillAppear()
+    // Everytime the view is presented
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true // Hide navigation bar.
+        navigationController?.setNavigationBarHidden(true, animated: true) // Hide the navigation bar.
     }
     
-    // MARK: Actions
+    // MARK: pushFollowersListViewcontroller()
     @objc func pushFollowersListViewcontroller() {
         guard !isUsernameEmpty else {
             print("Username is empty")
@@ -59,14 +61,14 @@ class SearchUIViewController: UIViewController {
         NSLog("❎ pushFollowersListViewController Action called.")
     }
     
-    // MARK: Tap Gesture
+    // MARK: createKeyboardDismissTapGesture()
     // Make keyboard disappear on tap away.
     func createKeyboardDismissTapGesture() {
         let tapGesture = UITapGestureRecognizer(target: view.self, action: #selector(UIView.endEditing(_:))) // Take away first responder status from the keyboard.
         view.addGestureRecognizer(tapGesture) // Add tap gesture to view controller.
     }
     
-    // MARK: logoUIImageView
+    // MARK: logoUIImageView()
     func configureLogoUIImageView() {
         view.addSubview(logoUIImageView)
         // Storyboard.
@@ -84,7 +86,7 @@ class SearchUIViewController: UIViewController {
         ])
     }
     
-    // MARK: usernameUITextField
+    // MARK: usernameUITextField()
     func configureUsernameUITextField() {
         view.addSubview(usernameUITextField)
         
@@ -103,7 +105,7 @@ class SearchUIViewController: UIViewController {
         ])
     }
     
-    // MARK: searchUIButton
+    // MARK: searchUIButton()
     func configureSearchUIButton() {
         view.addSubview(searchUIButton)
         
@@ -125,7 +127,7 @@ class SearchUIViewController: UIViewController {
     }
 }
 
-// MARK: Extensions
+// MARK: Extension SearchUIViewController
 extension SearchUIViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("❎ Delegate SearchViewController detected an event.")

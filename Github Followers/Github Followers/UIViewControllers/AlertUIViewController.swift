@@ -10,7 +10,7 @@ import UIKit
 class AlertUIViewController: UIViewController {
     let padding: CGFloat = 20
 
-    let containerUIView = UIView()
+    let containerUIView = ContainerUIView(frame: .zero)
     let titleUILabel = TitleUILabel(textAlignment: .center, fontSize: 20)
     let bodyUILabel = BodyUILabel(textAlignment: .center)
     let buttonUIButton = ButtonUIButton(color: .systemPink, title: "OK", imageSystemName: "alert")
@@ -42,10 +42,7 @@ class AlertUIViewController: UIViewController {
     
     func configureContainerUIView() {
         view.addSubview(containerUIView)
-        containerUIView.backgroundColor = .systemBackground
-        containerUIView.layer.cornerRadius = 16
-        containerUIView.layer.borderWidth = 2
-        containerUIView.layer.borderColor = UIColor.white.cgColor
+        
         
         // Storyboard.
         containerUIView.translatesAutoresizingMaskIntoConstraints = false
@@ -68,7 +65,6 @@ class AlertUIViewController: UIViewController {
             titleUILabel.leadingAnchor.constraint(equalTo: containerUIView.leadingAnchor, constant: padding),
             titleUILabel.trailingAnchor.constraint(equalTo: containerUIView.trailingAnchor, constant: -padding),
             titleUILabel.heightAnchor.constraint(equalToConstant: 28)
-        
         ])
     }
     
@@ -103,8 +99,6 @@ class AlertUIViewController: UIViewController {
             bodyUILabel.leadingAnchor.constraint(equalTo: containerUIView.leadingAnchor, constant: 20),
             bodyUILabel.trailingAnchor.constraint(equalTo: containerUIView.trailingAnchor, constant: -padding),
             bodyUILabel.bottomAnchor.constraint(equalTo: buttonUIButton.topAnchor, constant: -12)
-            
-        
         ])
         
     }
