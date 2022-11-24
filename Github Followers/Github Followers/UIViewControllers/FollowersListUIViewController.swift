@@ -17,7 +17,7 @@ class FollowersListUIViewController: UIViewController {
         
         NetworkSingleton.shared.getFollowers(username: username, page: 1) { (followers, error) in
             guard let followers = followers else {
-                self.presentAlertUIViewControllerOnMainThread(title: "UIViewcontroller error", body: error!, buttonTitle: "OK")
+                self.presentAlertUIViewControllerOnMainThread(title: "UIViewcontroller error", body: error!.rawValue, buttonTitle: "OK")
                 return
             }
             print(followers)

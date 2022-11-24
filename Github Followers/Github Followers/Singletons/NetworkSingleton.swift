@@ -18,26 +18,26 @@ class NetworkSingleton {
     // private init can only be called from within this class.
     private init() {}
     
-    func getFollowers(username: String, page: Int, completionHandler: @escaping ([Followers]?, String?) -> Void) {
+    func getFollowers(username: String, page: Int, completionHandler: @escaping ([Followers]?, ErrorMessage?) -> Void) {
         let endpoint = baseUrl + "/users/\(username)/followers?per_page=\(resultsPerPage)&page=\(page)"
         guard let url = URL(string: endpoint) else {
-            completionHandler(nil, "getFollowers() error creating URL.")
+            completionHandler(nil, .invalidUsername)
             return
         }
         
         let task = URLSession.shared.dataTask(with: url, completionHandler: {(data, response, error) in
             if let _ = error {
-                completionHandler(nil, "Data task error. No internet connection.")
+                completionHandler(nil, .unableToComplete)
                 return
             }
             
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                completionHandler(nil, "Data task error. Status code not 200.")
+                completionHandler(nil, .invalidResponse)
                 return
             }
             
             guard let data = data else {
-                completionHandler(nil, "Data task error. Server data not understood..")
+                    completionHandler(nil, .invalidData)
                 return
             }
             do {
@@ -46,7 +46,7 @@ class NetworkSingleton {
                 let followers = try decoder.decode([Followers].self, from: data)
                 completionHandler(followers, nil)
             } catch {
-                completionHandler(nil, "JSONDecoder error. Could not decode.")
+                completionHandler(nil, .invalidData)
             }
             
         })

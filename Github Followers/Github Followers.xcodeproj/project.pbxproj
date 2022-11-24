@@ -24,6 +24,7 @@
 		2BED9FF8292EAE9700BB8722 /* FollowerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FF7292EAE9700BB8722 /* FollowerModel.swift */; };
 		2BED9FFA292EB34100BB8722 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FF9292EB34100BB8722 /* UserModel.swift */; };
 		2BED9FFC292EB93500BB8722 /* NetworkSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FFB292EB93500BB8722 /* NetworkSingleton.swift */; };
+		2BEDA000292F1B0C00BB8722 /* ErrorMessageEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FFF292F1B0C00BB8722 /* ErrorMessageEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		2BED9FF7292EAE9700BB8722 /* FollowerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerModel.swift; sourceTree = "<group>"; };
 		2BED9FF9292EB34100BB8722 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		2BED9FFB292EB93500BB8722 /* NetworkSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSingleton.swift; sourceTree = "<group>"; };
+		2BED9FFF292F1B0C00BB8722 /* ErrorMessageEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +64,6 @@
 		2B9243FD2921FD7B005FA5C1 = {
 			isa = PBXGroup;
 			children = (
-				2BED9FFE292EB97300BB8722 /* Singletons */,
-				2BED9FFD292EB94700BB8722 /* Models */,
 				2B9244082921FD7B005FA5C1 /* Github Followers */,
 				2B9244072921FD7B005FA5C1 /* Products */,
 			);
@@ -80,6 +80,9 @@
 		2B9244082921FD7B005FA5C1 /* Github Followers */ = {
 			isa = PBXGroup;
 			children = (
+				2BEDA001292F1B1200BB8722 /* Enums */,
+				2BED9FFE292EB97300BB8722 /* Singletons */,
+				2BED9FFD292EB94700BB8722 /* Models */,
 				2B9244092921FD7B005FA5C1 /* AppDelegate.swift */,
 				2B92440B2921FD7B005FA5C1 /* SceneDelegate.swift */,
 				2B9244122921FD80005FA5C1 /* Assets.xcassets */,
@@ -130,6 +133,14 @@
 				2BED9FFB292EB93500BB8722 /* NetworkSingleton.swift */,
 			);
 			path = Singletons;
+			sourceTree = "<group>";
+		};
+		2BEDA001292F1B1200BB8722 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				2BED9FFF292F1B0C00BB8722 /* ErrorMessageEnum.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +218,7 @@
 				2B92440A2921FD7B005FA5C1 /* AppDelegate.swift in Sources */,
 				2BED9FE22927518100BB8722 /* FavoritesUIViewController.swift in Sources */,
 				2BED9FEA292C79E600BB8722 /* FollowersListUIViewController.swift in Sources */,
+				2BEDA000292F1B0C00BB8722 /* ErrorMessageEnum.swift in Sources */,
 				2B92440C2921FD7B005FA5C1 /* SceneDelegate.swift in Sources */,
 				2BED9FF8292EAE9700BB8722 /* FollowerModel.swift in Sources */,
 				2BED9FF0292C9F7800BB8722 /* AlertUIViewController.swift in Sources */,
