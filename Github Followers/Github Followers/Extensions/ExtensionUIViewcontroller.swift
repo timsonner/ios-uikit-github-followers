@@ -7,6 +7,7 @@
 
 import UIKit
 
+// Gives any resent an alert dialog on the main thread.
 extension UIViewController {
     func presentAlertUIViewControllerOnMainThread(title: String, body: String, buttonTitle: String) {
         DispatchQueue.main.async {

@@ -80,6 +80,7 @@
 		2B9244082921FD7B005FA5C1 /* Github Followers */ = {
 			isa = PBXGroup;
 			children = (
+				2BEDA0022930A9F000BB8722 /* Extensions */,
 				2BEDA001292F1B1200BB8722 /* Enums */,
 				2BED9FFE292EB97300BB8722 /* Singletons */,
 				2BED9FFD292EB94700BB8722 /* Models */,
@@ -100,7 +101,6 @@
 				2BED9FE9292C79E600BB8722 /* FollowersListUIViewController.swift */,
 				2BED9FE3292751C400BB8722 /* SearchUIViewController.swift */,
 				2BED9FEF292C9F7800BB8722 /* AlertUIViewController.swift */,
-				2BED9FF1292CB31600BB8722 /* ExtensionUIViewcontroller.swift */,
 				2BED9FE12927518100BB8722 /* FavoritesUIViewController.swift */,
 			);
 			path = UIViewControllers;
@@ -141,6 +141,14 @@
 				2BED9FFF292F1B0C00BB8722 /* ErrorMessageEnum.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		2BEDA0022930A9F000BB8722 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2BED9FF1292CB31600BB8722 /* ExtensionUIViewcontroller.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

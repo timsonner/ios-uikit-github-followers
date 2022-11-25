@@ -7,9 +7,9 @@
 
 import Foundation
 
-enum ErrorMessage: String {
-case invalidUsername = "Invalid Username"
-case unableToComplete = "Unable to complete network request. No Internet."
+enum ErrorMessage: String, Error {
+    case invalidUsername = "Invalid Username"
+    case unableToComplete = "Unable to complete network request. No Internet."
     case invalidResponse = "Server response error. Try again."
     case invalidData = "Server data unusable. Try again."
 }

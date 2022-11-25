@@ -15,7 +15,7 @@ class SearchUIViewController: UIViewController {
     let searchUIButton = ButtonUIButton()
     
     var isUsernameEmpty: Bool {
-        return usernameUITextField.text!.isEmpty
+        return usernameUITextField.text!.isEmpty // true if empty
     }
     
     // MARK: viewDidLoad()
@@ -109,6 +109,7 @@ class SearchUIViewController: UIViewController {
     func configureSearchUIButton() {
         view.addSubview(searchUIButton)
         
+        // Add action for button touch event.
         searchUIButton.addTarget(self, action: #selector(pushFollowersListViewcontroller), for: .touchUpInside)
         
         // Convenience init from SearchUIButton.

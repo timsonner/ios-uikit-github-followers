@@ -15,13 +15,16 @@ class FollowersListUIViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         
-        NetworkSingleton.shared.getFollowers(username: username, page: 1) { (followers, error) in
-            guard let followers = followers else {
-                self.presentAlertUIViewControllerOnMainThread(title: "UIViewcontroller error", body: error!.rawValue, buttonTitle: "OK")
-                return
-            }
-            print(followers)
+        NetworkSingleton.shared.getFollowers(username: username, page: 1) { (result) in
             
+            switch result {
+            case .success(let followers):
+                print(followers)
+                break
+            case.failure(let error):
+                self.presentAlertUIViewControllerOnMainThread(title: "Error", body: error.rawValue, buttonTitle: "Ok")
+                break
+            }
         }
     }
     
