@@ -9,8 +9,8 @@ import Foundation
 
 // https://api.github.com/<user>/followers
 
-struct Followers: Codable {
+struct FollowerModel: Codable {
     
-    var login: String
+    var login: String // username
     var avatarUrl: String
 }

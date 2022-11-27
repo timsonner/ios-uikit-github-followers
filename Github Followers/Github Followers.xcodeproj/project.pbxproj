@@ -25,6 +25,8 @@
 		2BED9FFA292EB34100BB8722 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FF9292EB34100BB8722 /* UserModel.swift */; };
 		2BED9FFC292EB93500BB8722 /* NetworkSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FFB292EB93500BB8722 /* NetworkSingleton.swift */; };
 		2BEDA000292F1B0C00BB8722 /* ErrorMessageEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FFF292F1B0C00BB8722 /* ErrorMessageEnum.swift */; };
+		2BEDA0052930B32E00BB8722 /* FollowerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDA0042930B32E00BB8722 /* FollowerCollectionViewCell.swift */; };
+		2BEDA0072930B49700BB8722 /* AvatarUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDA0062930B49700BB8722 /* AvatarUIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		2BED9FF9292EB34100BB8722 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		2BED9FFB292EB93500BB8722 /* NetworkSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSingleton.swift; sourceTree = "<group>"; };
 		2BED9FFF292F1B0C00BB8722 /* ErrorMessageEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageEnum.swift; sourceTree = "<group>"; };
+		2BEDA0042930B32E00BB8722 /* FollowerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCollectionViewCell.swift; sourceTree = "<group>"; };
+		2BEDA0062930B49700BB8722 /* AvatarUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarUIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,11 +113,12 @@
 		2BED9FF4292DBC9C00BB8722 /* UIViews */ = {
 			isa = PBXGroup;
 			children = (
-				2BED9FED292C9E0100BB8722 /* BodyUILabel.swift */,
+				2BEDA0082930B4BC00BB8722 /* UILabels */,
+				2BEDA0032930B2E900BB8722 /* UICollectionViews */,
 				2BED9FE5292B57CD00BB8722 /* ButtonUIButton.swift */,
 				2BED9FE7292C118800BB8722 /* UsernameUITextField.swift */,
-				2BED9FEB292C9A7700BB8722 /* TitleUILabel.swift */,
 				2BED9FF5292DC0F500BB8722 /* ContainerUIView.swift */,
+				2BEDA0062930B49700BB8722 /* AvatarUIImageView.swift */,
 			);
 			path = UIViews;
 			sourceTree = "<group>";
@@ -149,6 +154,23 @@
 				2BED9FF1292CB31600BB8722 /* ExtensionUIViewcontroller.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2BEDA0032930B2E900BB8722 /* UICollectionViews */ = {
+			isa = PBXGroup;
+			children = (
+				2BEDA0042930B32E00BB8722 /* FollowerCollectionViewCell.swift */,
+			);
+			path = UICollectionViews;
+			sourceTree = "<group>";
+		};
+		2BEDA0082930B4BC00BB8722 /* UILabels */ = {
+			isa = PBXGroup;
+			children = (
+				2BED9FEB292C9A7700BB8722 /* TitleUILabel.swift */,
+				2BED9FED292C9E0100BB8722 /* BodyUILabel.swift */,
+			);
+			path = UILabels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BED9FFC292EB93500BB8722 /* NetworkSingleton.swift in Sources */,
+				2BEDA0072930B49700BB8722 /* AvatarUIImageView.swift in Sources */,
 				2BED9FE4292751C400BB8722 /* SearchUIViewController.swift in Sources */,
 				2B92440A2921FD7B005FA5C1 /* AppDelegate.swift in Sources */,
 				2BED9FE22927518100BB8722 /* FavoritesUIViewController.swift in Sources */,
@@ -229,6 +252,7 @@
 				2BEDA000292F1B0C00BB8722 /* ErrorMessageEnum.swift in Sources */,
 				2B92440C2921FD7B005FA5C1 /* SceneDelegate.swift in Sources */,
 				2BED9FF8292EAE9700BB8722 /* FollowerModel.swift in Sources */,
+				2BEDA0052930B32E00BB8722 /* FollowerCollectionViewCell.swift in Sources */,
 				2BED9FF0292C9F7800BB8722 /* AlertUIViewController.swift in Sources */,
 				2BED9FEE292C9E0100BB8722 /* BodyUILabel.swift in Sources */,
 				2BED9FFA292EB34100BB8722 /* UserModel.swift in Sources */,

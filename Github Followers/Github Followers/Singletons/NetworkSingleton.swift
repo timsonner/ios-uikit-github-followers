@@ -18,7 +18,7 @@ class NetworkSingleton {
     // private init can only be called from within this class.
     private init() {}
     
-    func getFollowers(username: String, page: Int, completionHandler: @escaping (Result<[Followers], ErrorMessage>) -> Void) {
+    func getFollowers(username: String, page: Int, completionHandler: @escaping (Result<[FollowerModel], ErrorMessage>) -> Void) {
         let endpoint = baseUrl + "/users/\(username)/followers?per_page=\(resultsPerPage)&page=\(page)"
         guard let url = URL(string: endpoint) else {
             completionHandler(.failure(.invalidUsername))
@@ -43,7 +43,7 @@ class NetworkSingleton {
             do {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let followers = try decoder.decode([Followers].self, from: data)
+                let followers = try decoder.decode([FollowerModel].self, from: data)
                 completionHandler(.success(followers))
             } catch {
                 completionHandler(.failure(.invalidData))
