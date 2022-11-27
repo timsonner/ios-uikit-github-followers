@@ -15,7 +15,7 @@
 		2BED9FE4292751C400BB8722 /* SearchUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FE3292751C400BB8722 /* SearchUIViewController.swift */; };
 		2BED9FE6292B57CD00BB8722 /* ButtonUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FE5292B57CD00BB8722 /* ButtonUIButton.swift */; };
 		2BED9FE8292C118800BB8722 /* UsernameUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FE7292C118800BB8722 /* UsernameUITextField.swift */; };
-		2BED9FEA292C79E600BB8722 /* FollowersListUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FE9292C79E600BB8722 /* FollowersListUIViewController.swift */; };
+		2BED9FEA292C79E600BB8722 /* FollowersUICollectionViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FE9292C79E600BB8722 /* FollowersUICollectionViewViewController.swift */; };
 		2BED9FEC292C9A7700BB8722 /* TitleUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FEB292C9A7700BB8722 /* TitleUILabel.swift */; };
 		2BED9FEE292C9E0100BB8722 /* BodyUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FED292C9E0100BB8722 /* BodyUILabel.swift */; };
 		2BED9FF0292C9F7800BB8722 /* AlertUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FEF292C9F7800BB8722 /* AlertUIViewController.swift */; };
@@ -40,7 +40,7 @@
 		2BED9FE3292751C400BB8722 /* SearchUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUIViewController.swift; sourceTree = "<group>"; };
 		2BED9FE5292B57CD00BB8722 /* ButtonUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonUIButton.swift; sourceTree = "<group>"; };
 		2BED9FE7292C118800BB8722 /* UsernameUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameUITextField.swift; sourceTree = "<group>"; };
-		2BED9FE9292C79E600BB8722 /* FollowersListUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListUIViewController.swift; sourceTree = "<group>"; };
+		2BED9FE9292C79E600BB8722 /* FollowersUICollectionViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersUICollectionViewViewController.swift; sourceTree = "<group>"; };
 		2BED9FEB292C9A7700BB8722 /* TitleUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleUILabel.swift; sourceTree = "<group>"; };
 		2BED9FED292C9E0100BB8722 /* BodyUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyUILabel.swift; sourceTree = "<group>"; };
 		2BED9FEF292C9F7800BB8722 /* AlertUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUIViewController.swift; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 		2BED9FF3292DBC4E00BB8722 /* UIViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				2BED9FE9292C79E600BB8722 /* FollowersListUIViewController.swift */,
+				2BED9FE9292C79E600BB8722 /* FollowersUICollectionViewViewController.swift */,
 				2BED9FE3292751C400BB8722 /* SearchUIViewController.swift */,
 				2BED9FEF292C9F7800BB8722 /* AlertUIViewController.swift */,
 				2BED9FE12927518100BB8722 /* FavoritesUIViewController.swift */,
@@ -248,7 +248,7 @@
 				2BED9FE4292751C400BB8722 /* SearchUIViewController.swift in Sources */,
 				2B92440A2921FD7B005FA5C1 /* AppDelegate.swift in Sources */,
 				2BED9FE22927518100BB8722 /* FavoritesUIViewController.swift in Sources */,
-				2BED9FEA292C79E600BB8722 /* FollowersListUIViewController.swift in Sources */,
+				2BED9FEA292C79E600BB8722 /* FollowersUICollectionViewViewController.swift in Sources */,
 				2BEDA000292F1B0C00BB8722 /* ErrorMessageEnum.swift in Sources */,
 				2B92440C2921FD7B005FA5C1 /* SceneDelegate.swift in Sources */,
 				2BED9FF8292EAE9700BB8722 /* FollowerModel.swift in Sources */,

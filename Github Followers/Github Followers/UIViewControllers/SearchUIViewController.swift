@@ -45,7 +45,7 @@ class SearchUIViewController: UIViewController {
         }
         
         // Create instance of UIViewController.
-        let followersListViewController = FollowersListUIViewController()
+        let followersListViewController = FollowersUICollectionViewViewController()
         
         // Set the username property of the UIViewController.
         followersListViewController.username = usernameUITextField.text
