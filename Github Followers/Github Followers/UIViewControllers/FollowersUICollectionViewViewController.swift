@@ -43,7 +43,7 @@ class FollowersUICollectionViewViewController: UIViewController {
         // Add object to main view (self).
         view.addSubview(collectionView)
         // Set background color of UICollectionView
-        collectionView.backgroundColor = .systemPink
+        collectionView.backgroundColor = .systemBackground
         // Register cell in collection view.
         collectionView.register(FollowerCollectionViewCell.self, forCellWithReuseIdentifier: FollowerCollectionViewCell.reuseID)
     }
@@ -85,10 +85,12 @@ class FollowersUICollectionViewViewController: UIViewController {
         })
     }
     
-    func updateData(){
+    func updateData() {
         var snapShot = NSDiffableDataSourceSnapshot<Section, FollowerModel>()
         snapShot.appendSections([.main])
         snapShot.appendItems(followers)
-        dataSource.apply(snapShot, animatingDifferences: true)
+        DispatchQueue.main.async {
+            self.dataSource.apply(snapShot, animatingDifferences: true)
+        }
     }
 }
