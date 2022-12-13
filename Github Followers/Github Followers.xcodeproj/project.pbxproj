@@ -27,6 +27,7 @@
 		2BEDA000292F1B0C00BB8722 /* ErrorMessageEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED9FFF292F1B0C00BB8722 /* ErrorMessageEnum.swift */; };
 		2BEDA0052930B32E00BB8722 /* FollowerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDA0042930B32E00BB8722 /* FollowerCollectionViewCell.swift */; };
 		2BEDA0072930B49700BB8722 /* AvatarUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDA0062930B49700BB8722 /* AvatarUIImageView.swift */; };
+		2BEDA00A2942D3E900BB8722 /* Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDA0092942D3E900BB8722 /* Layouts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		2BED9FFF292F1B0C00BB8722 /* ErrorMessageEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageEnum.swift; sourceTree = "<group>"; };
 		2BEDA0042930B32E00BB8722 /* FollowerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCollectionViewCell.swift; sourceTree = "<group>"; };
 		2BEDA0062930B49700BB8722 /* AvatarUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarUIImageView.swift; sourceTree = "<group>"; };
+		2BEDA0092942D3E900BB8722 /* Layouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layouts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		2B9243FD2921FD7B005FA5C1 = {
 			isa = PBXGroup;
 			children = (
+				2BEDA0092942D3E900BB8722 /* Layouts.swift */,
 				2B9244082921FD7B005FA5C1 /* Github Followers */,
 				2B9244072921FD7B005FA5C1 /* Products */,
 			);
@@ -114,8 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				2BEDA0082930B4BC00BB8722 /* UILabels */,
-				2BEDA0032930B2E900BB8722 /* UICollectionViews */,
 				2BED9FE5292B57CD00BB8722 /* ButtonUIButton.swift */,
+				2BEDA0042930B32E00BB8722 /* FollowerCollectionViewCell.swift */,
 				2BED9FE7292C118800BB8722 /* UsernameUITextField.swift */,
 				2BED9FF5292DC0F500BB8722 /* ContainerUIView.swift */,
 				2BEDA0062930B49700BB8722 /* AvatarUIImageView.swift */,
@@ -154,14 +157,6 @@
 				2BED9FF1292CB31600BB8722 /* ExtensionUIViewcontroller.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		2BEDA0032930B2E900BB8722 /* UICollectionViews */ = {
-			isa = PBXGroup;
-			children = (
-				2BEDA0042930B32E00BB8722 /* FollowerCollectionViewCell.swift */,
-			);
-			path = UICollectionViews;
 			sourceTree = "<group>";
 		};
 		2BEDA0082930B4BC00BB8722 /* UILabels */ = {
@@ -260,6 +255,7 @@
 				2BED9FF6292DC0F500BB8722 /* ContainerUIView.swift in Sources */,
 				2BED9FEC292C9A7700BB8722 /* TitleUILabel.swift in Sources */,
 				2BED9FE8292C118800BB8722 /* UsernameUITextField.swift in Sources */,
+				2BEDA00A2942D3E900BB8722 /* Layouts.swift in Sources */,
 				2BED9FE6292B57CD00BB8722 /* ButtonUIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -33,14 +33,16 @@ class FollowersUICollectionViewViewController: UIViewController {
     }
     
     func configureUIViewController() {
+        // Set background of UIViewController (self).
         view.backgroundColor = .systemBackground
+        // Set title preference for navigation bar.
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     func configureUICollectionView() {
         // Create an instance of a UICollectionView.
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createUICollectionViewLayoutThreeColumns())
-        // Add object to main view (self).
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createUICollectionViewLayoutThreeColumns(view: view))
+        // Add subview to this UIViewController (self).
         view.addSubview(collectionView)
         // Set background color of UICollectionView
         collectionView.backgroundColor = .systemBackground
@@ -48,22 +50,13 @@ class FollowersUICollectionViewViewController: UIViewController {
         collectionView.register(FollowerCollectionViewCell.self, forCellWithReuseIdentifier: FollowerCollectionViewCell.reuseID)
     }
     
-    func createUICollectionViewLayoutThreeColumns() -> UICollectionViewFlowLayout {
-        let width = view.bounds.width
-        let padding: CGFloat = 12
-        let minimumItemSpacing: CGFloat = 10
-        // Padding outer cell left (1), outer cell right (2) (2 total), spacing middle column cell left (1), spacing middle column right (2) (2 total).
-        let availableWidth = width - (padding * 2) - (minimumItemSpacing * 2)
-        let itemWidth = availableWidth / 3
-        
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
-        flowLayout.itemSize = CGSize(width: itemWidth, height: itemWidth + 40)
-        return flowLayout
-    }
-    
     func getFollowers() {
-        NetworkSingleton.shared.getFollowers(username: username, page: 1) { (result) in
+        NetworkSingleton.shared.getFollowers(username: username, page: 1) { [weak self] (result) in // capture list
+            
+            // weak self for Automatic Reference Counting
+            guard let self = self else {
+                return
+            }
                     switch result {
                     case .success(let followers):
                         self.followers = followers
@@ -80,6 +73,8 @@ class FollowersUICollectionViewViewController: UIViewController {
     func configureDataSource() {
         dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier -> UICollectionViewCell? in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCollectionViewCell.reuseID, for: indexPath) as! FollowerCollectionViewCell
+            
+            // Pass data from data source to the UICollectionViewCell.
             cell.set(follower: itemIdentifier)
             return cell
         })
@@ -89,6 +84,7 @@ class FollowersUICollectionViewViewController: UIViewController {
         var snapShot = NSDiffableDataSourceSnapshot<Section, FollowerModel>()
         snapShot.appendSections([.main])
         snapShot.appendItems(followers)
+        // Switch to main thread to update UI.
         DispatchQueue.main.async {
             self.dataSource.apply(snapShot, animatingDifferences: true)
         }

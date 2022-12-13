@@ -5,12 +5,15 @@
 //  Created by Timothy Sonner on 11/23/22.
 //
 
-import Foundation
+import UIKit
 
 class NetworkSingleton {
-    
-    let baseUrl = "https://api.github.com"
+    // Base url should be not be accesible outside this class.
+    private let baseUrl = "https://api.github.com"
+    // Set number of results per page.
     let resultsPerPage = 100
+    // Setup caching of UIImages.
+    let cache = NSCache<NSString, UIImage>()
     
     // NetworkSingleton creates a globally scoped instance of itself.
     static let shared = NetworkSingleton()
