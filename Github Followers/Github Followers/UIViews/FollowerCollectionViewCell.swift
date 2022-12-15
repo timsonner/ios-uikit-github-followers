@@ -37,17 +37,18 @@ class FollowerCollectionViewCell: UICollectionViewCell {
         addSubview(followerAvatar)
         addSubview(followerName)
         
+        // For UIImage to scale to fit, .containerView is omitted from .constraint().
         NSLayoutConstraint.activate([
             followerAvatar.topAnchor.constraint(equalTo: topAnchor, constant: padding),
             followerAvatar.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
             followerAvatar.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
             followerAvatar.heightAnchor.constraint(equalTo: followerAvatar.widthAnchor),
         
-            
             followerName.topAnchor.constraint(equalTo: followerAvatar.bottomAnchor, constant: 12),
-            followerName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
-            followerName.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
+            followerName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
+            followerName.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
             followerName.heightAnchor.constraint(equalToConstant: 20)
         ])
     }
 }
+

@@ -18,13 +18,15 @@ class FollowersUICollectionViewViewController: UIViewController {
     var username: String!
     var followers: [FollowerModel] = []
     var collectionView: UICollectionView!
+    var page: Int = 1
+    var hasMoreDataToLoad = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureUIViewController()
         configureUICollectionView()
-        getFollowers()
+        getFollowers(username: username, page: page)
         configureDataSource()
     }
     
@@ -42,6 +44,8 @@ class FollowersUICollectionViewViewController: UIViewController {
     func configureUICollectionView() {
         // Create an instance of a UICollectionView.
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createUICollectionViewLayoutThreeColumns(view: view))
+        // Set delegate
+        collectionView.delegate = self
         // Add subview to this UIViewController (self).
         view.addSubview(collectionView)
         // Set background color of UICollectionView
@@ -50,8 +54,8 @@ class FollowersUICollectionViewViewController: UIViewController {
         collectionView.register(FollowerCollectionViewCell.self, forCellWithReuseIdentifier: FollowerCollectionViewCell.reuseID)
     }
     
-    func getFollowers() {
-        NetworkSingleton.shared.getFollowers(username: username, page: 1) { [weak self] (result) in // capture list
+    func getFollowers(username: String, page: Int) {
+        NetworkSingleton.shared.getFollowers(username: username, page: page) { [weak self] (result) in // capture list
             
             // weak self for Automatic Reference Counting
             guard let self = self else {
@@ -59,7 +63,10 @@ class FollowersUICollectionViewViewController: UIViewController {
             }
                     switch result {
                     case .success(let followers):
-                        self.followers = followers
+                        if followers.count < 100 {
+                            self.hasMoreDataToLoad = false
+                        }
+                        self.followers.append(contentsOf: followers)
                         self.updateData()
                         print(followers)
                         break
@@ -89,4 +96,24 @@ class FollowersUICollectionViewViewController: UIViewController {
             self.dataSource.apply(snapShot, animatingDifferences: true)
         }
     }
+}
+
+extension FollowersUICollectionViewViewController: UICollectionViewDelegate {
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let scrollPositionYAxis = scrollView.contentOffset.y
+        let heightOfLoadedData = scrollView.contentSize.height
+        let phoneScreenHeight = scrollView.frame.height
+        
+        if scrollPositionYAxis > heightOfLoadedData - phoneScreenHeight {
+            // If there is more data, continue, else bail out of this function.
+            guard hasMoreDataToLoad else {
+                return
+            }
+            // User scrolled past loaded data. Increment page by 1, thus loading the next page from the API. User now sees next page of data.
+            page += 1
+            getFollowers(username: username, page: page)
+        }
+    }
+    
 }
